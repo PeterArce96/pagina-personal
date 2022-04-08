@@ -18,4 +18,39 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
 }
+.header{
+
+}
+.header-nav{
+    padding: 0.5em 0;
+}
+.header-nav__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-container);
+}
+.header-nav__link-logo-container{
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 3rem;
+}
+.header-nav__logo{
+
+}
+.header-nav__menu-link-list{
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header-nav__menu-link-item{
+    display: flex;
+}
+.header-nav_menu-link{
+    color: var(--text-color);
+    text-decoration: none;
+}
 

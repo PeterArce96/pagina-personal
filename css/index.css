@@ -49,8 +49,8 @@
     transition: var(--all-transitions);
 }
 .header-nav__link-logo-container:hover{
-    box-shadow: 0 0 0.25rem 0 var(--primary-highlight),
-    0 0 0.5rem var(--primary-highlight);
+    box-shadow: 0 0 0.5rem 0 var(--primary-highlight),
+    0 0 0.25rem var(--primary-highlight);
 }   
 .header-nav__link-logo{
     height: 100%;

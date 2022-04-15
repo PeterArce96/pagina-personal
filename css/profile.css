@@ -17,6 +17,15 @@
     --border-radius: 0.5rem;
     --all-transitions: all 0.25s;
 }
+@keyframes tech-jump{
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: 1rem;
+    }
+}
+
 .profile{
     background-image: url(https://i.postimg.cc/brSKyMR4/react-01-01.png);
     background-size: cover;
@@ -25,6 +34,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 .profile__container{
     display: grid;
@@ -41,8 +51,16 @@
     gap: 1rem;
     background-color: var(--secondary-shadow-color);
     border-radius: var(--border-radius);
+    box-shadow: 0 0 0 0.125rem var(--primary-shadow-color),
+    0 0 0 0.25rem var(--primary-shadow-color);
     padding: 1rem;
     text-align: center;
+}
+.profile__info:hover{
+    box-shadow: 0 0 0 0.125rem var(--primary-highlight),
+    0 0 0 0.25rem var(--primary-highlight),
+    0 0 0.5rem 0 var(--secondary-highlight),
+    0 0 0.75rem 0 var(--secondary-highlight);
 }
 .profile__info-title{
     font-size: 1.25rem;
@@ -77,7 +95,9 @@
 }
 
 .profile__figure{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .profile__figure-image-container{
     position: relative;
@@ -88,6 +108,12 @@
 .profile__figure-image{
     border-radius: 50%;
     width: 100%;
+    transition: var(--all-transitions);
+}
+.profile__figure-image:hover{
+    box-shadow:
+    0 0 0.25rem 0 var(--primary-highlight),
+    0 0 0.5rem 0 var(--primary-highlight);
 }
 .profile__figure-tech-one{
     position: absolute;
@@ -95,7 +121,8 @@
     top: 100%;
     left: 50%;
     transform: translate(-50%,-50%);
-    
+    animation: tech-jump 1s ease-in-out 0s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-two{
     position: absolute;
@@ -103,6 +130,8 @@
     top: 50%;
     left: 0;
     transform: translate(-50%,-50%);
+    animation: tech-jump 1s ease-in-out 0s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-three{
     position: absolute;
@@ -110,6 +139,8 @@
     top: 50%;
     left: 100%;
     transform: translate(-50%,-50%);
+    animation: tech-jump 1s ease-in-out 0s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-four{
     position: absolute;
@@ -117,4 +148,32 @@
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
+    animation: tech-jump 1s ease-in-out 0s infinite alternate;
+    pointer-events: none;
+}
+@media (min-width:854px){
+    .profile__container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .profile__info{
+        padding: 2rem;
+        text-align: start;
+    }
+    .profile__info-title{
+        font-size: 1.25rem;
+    }
+    .profile__info-subtitle{
+        font-size: 1.5rem;
+    }
+    .profile__info-description{
+        display: flex;
+        margin: 0;
+    }
+    .profile__info-link-container{
+        justify-content: flex-start;
+    }
+    .profile__figure-image-container{
+        max-width: 360px;
+    }
+    
 }

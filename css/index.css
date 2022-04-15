@@ -25,6 +25,7 @@
     color: var(--text-color);
     font-family: 'Roboto', 'sanf serif';
     margin: 0;
+    min-height: 200vh;
 }
 
 @media(min-width: 854px){

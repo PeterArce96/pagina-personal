@@ -1,5 +1,6 @@
 @import url(./header.css); 
 @import url(./profile.css); 
+@import url(./experiences.css);
 
 :root{
     scroll-behavior: smooth;
@@ -21,11 +22,25 @@
     --all-transitions: all 0.25s;
 }
 .body{
-    background-color: var(--secondary-theme-color);
+    background-color: var(--primary-theme-color);
     color: var(--text-color);
     font-family: 'Roboto', 'sanf serif';
     margin: 0;
+}
+main{
+    width: 100%;
     min-height: 200vh;
+}
+.wave-separator{
+    width: 100%;
+}
+.wave-separator__wave-container{
+    display: flex;
+    margin: 0;
+}
+.waver-separator__wave{
+    width: 100%;
+    margin: 0;
 }
 
 @media(min-width: 854px){

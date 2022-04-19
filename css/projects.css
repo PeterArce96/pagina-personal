@@ -37,7 +37,9 @@
 }
 .projects__projects-list{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "item item item"
+                         "item item item";
     gap: 2rem;
     list-style: none;
     padding: 0;
@@ -90,4 +92,13 @@
     padding: 0.5em 1em;
     color: var(--button-text-color);
     text-decoration: none;
+}
+@media(max-width: 854px){
+    .projects__projects-list{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+    }
 }

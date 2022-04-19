@@ -40,6 +40,7 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     list-style: none;
+    padding: 0;
 }
 .projects__projects-item{
     display: flex;
@@ -47,7 +48,6 @@
     gap: 1.5rem;
     background-color: var(--secondary-theme-color);
     border: 6px solid white;
-    border-radius: 1rem;
 }
 .projects__item-image-container{
     display: flex;
@@ -55,7 +55,6 @@
     margin: 0;
 }
 .projects__item-image{
-    border-radius: 1rem;
     width: 100%;
 }
 .projects__item-data{
@@ -78,10 +77,10 @@
     margin: 0;
 }
 .projects__item-button-container{
-    padding: 0 1rem 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    padding: 0 1rem 1rem;
 }
 .projects__item-button{
     font-weight: 700;

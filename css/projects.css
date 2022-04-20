@@ -1,25 +1,5 @@
-:root{
-    scroll-behavior: smooth;
-    --primary-theme-color: #20232a;
-    --secondary-theme-color: #282c34;
-    --text-color: #fff;
-    --primary-shadow-color: #8888;
-    --secondary-shadow-color: #21242c80;
-    --shadow-color: #8888;
-    --button-color: #61dafb;
-    --button-color-active: #fff;
-    --button-text-color: #000;
-    --primary-highlight: #61dafb;
-    --secondary-highlight: #ffd700;
-    --padding-section: 4rem 0;
-    --padding-container: 0 2em;
-    --max-width-container: 1024px;
-    --border-radius: 0.5rem;
-    --all-transitions: all 0.25s;
-}
-
 .projects{
-    padding: var(--padding-container);
+    padding: 0 2rem 2rem;
 }
 .projects__container{
     display: flex;
@@ -39,15 +19,24 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    list-style: none;
-    padding: 0;
 }
 .projects__projects-item{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     background-color: var(--secondary-theme-color);
-    border: 6px solid white;
+    box-shadow: 0 0 0 0.125rem var(--primary-shadow-color),
+                0 0 0 0.25rem var(--primary-shadow-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.projects__projects-item:hover{
+    box-shadow: 0 0 0 0.25rem var(--primary-highlight),
+                0 0 0.5rem 0 var(--secondary-highlight),
+                0 0 0.75rem 0 var(--secondary-highlight);
+    transform: scale(1.05);
+    transition: var(--all-transitions);
+      
 }
 .projects__item-image-container{
     display: flex;
@@ -65,12 +54,15 @@
     padding: 0 1rem;
 }
 .projects__item-data-title{
+    text-shadow: 0 0 0.125rem var(--primary-highlight);
     margin: 0;
 }
 .projects__item-data-core-technology{
+    font-weight: 500;
     margin: 0;
 }
 .projects__item-data-technologies{
+    text-shadow: 0 0 0.125rem var(--primary-highlight);
     margin: 0;
 }
 .projects__item-data-about{
@@ -90,4 +82,17 @@
     padding: 0.5em 1em;
     color: var(--button-text-color);
     text-decoration: none;
+    transition: var(--all-transitions);
+}
+.project__item-button--bg-gold{
+    background-color: var(--secondary-highlight);
+    border: 0.0625rem solid var(--secondary-highlight);
+}
+.projects__item-button:hover{
+    background-color: var(--button-color-active);
+}
+@media(min-width:854px){
+    .projects__projects-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
